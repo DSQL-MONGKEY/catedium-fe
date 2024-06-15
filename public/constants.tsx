@@ -1,6 +1,7 @@
 export const breeds = [
    {
       "breed": "African Leopard",
+      "icon": '🐆',
       "breedLatin": "Panthera pardus",
       "characteristic": "bla bla bla....",
       "description": "bla bla bla...",
@@ -8,6 +9,7 @@ export const breeds = [
    },
    {
       "breed": "Caracal",
+      "icon": '🐾',
       "breedLatin": "Caracal caracal",
       "characteristic": "bla bla bla....",
       "description": "bla bla bla...",
@@ -15,6 +17,7 @@ export const breeds = [
    },
    {
       "breed": "Cheetah",
+      "icon": '🔥',
       "breedLatin": "Acinonyx jubatus",
       "characteristic": "bla bla bla....",
       "description": "bla bla bla...",
@@ -22,6 +25,7 @@ export const breeds = [
    },
    {
       "breed": "Clouded Leopard",
+      "icon": '🐆',
       "breedLatin": "Neofelis nebulosa",
       "characteristic": "bla bla bla....",
       "description": "bla bla bla...",
@@ -29,6 +33,7 @@ export const breeds = [
    },
    {
       "breed": "Jaguar",
+      "icon": '🐯',
       "breedLatin": "Panthera onca",
       "characteristic": "bla bla bla....",
       "description": "bla bla bla...",
@@ -36,6 +41,7 @@ export const breeds = [
    },
    {
       "breed": "Lion",
+      "icon": '🦁',
       "breedLatin": "Panthera leo",
       "characteristic": "bla bla bla....",
       "description": "bla bla bla...",
@@ -43,6 +49,7 @@ export const breeds = [
    },
    {
       "breed": "Ocelot",
+      "icon": '🐾',
       "breedLatin": "Leopardus pardalis",
       "characteristic": "bla bla bla....",
       "description": "bla bla bla...",
@@ -50,6 +57,7 @@ export const breeds = [
    },
    {
       "breed": "Puma",
+      "icon": '🐾',
       "breedLatin": "Puma concolor",
       "characteristic": "bla bla bla....",
       "description": "bla bla bla...",
@@ -57,6 +65,7 @@ export const breeds = [
    },
    {
       "breed": "Snow Leopard",
+      "icon": '🐆',
       "breedLatin": "Panthera uncia",
       "characteristic": "bla bla bla....",
       "description": "bla bla bla...",
@@ -64,6 +73,7 @@ export const breeds = [
    },
    {
       "breed": "Tiger",
+      "icon": '🐅',
       "breedLatin": "Panthera tigris",
       "characteristic": "bla bla bla....",
       "description": "bla bla bla...",
