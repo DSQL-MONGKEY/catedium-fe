@@ -3,9 +3,12 @@
 import axios from 'axios'
 import React, { useState } from 'react'
 import { Button } from './ui/button'
+import { useHistoryStore } from '@/state'
+
 
 const FileUpload = () => {
    const [file, setFile] = useState<any>()
+   const { addHistories } = useHistoryStore()
    
    const handleFileUpload = async() => {
       const formData = new FormData()
@@ -16,8 +19,10 @@ const FileUpload = () => {
             "Content-Type": "multipart/form-data",
          }
       })
-      const str = data.data.class
-      console.log(str.charAt(0))
+      addHistories({
+         requestId: data.requestId,
+         class: data.data.class
+      })
       console.log(data)
    } 
 
