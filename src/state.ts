@@ -25,19 +25,3 @@ export const useHistoryStore = create<BreedPredictionHistoryState>((set) => ({
       }))
    }
 }))
-
-// type PredictionHistoryState = {
-//    predictionHistory: {class: string}[],
-// }
-// type PredictionHistoryAction = {
-//    updatePredictionHistory: (predictionHistory: PredictionHistoryState['predictionHistory']) => void
-// }
-// const initialGlobalState: PredictionHistoryState = {
-//    predictionHistory: []
-// }
-// export const usePredictionHistoryStore = create<PredictionHistoryState & PredictionHistoryAction>((set) => ({
-//    ...initialGlobalState,
-//    updatePredictionHistory: (predict) => set(() => (
-//       { predictionHistory: predict }
-//    ))
-// }))
