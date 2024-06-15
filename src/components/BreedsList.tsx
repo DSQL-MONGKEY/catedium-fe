@@ -26,7 +26,7 @@ const BreedsList = () => {
                   <DialogContent>
                      <DialogHeader>
                         <DialogTitle>
-                           {breed.breed}
+                           {breed.breed} &nbsp;{breed.icon}
                         </DialogTitle>
                         <DialogDescription>
                            {breed.breedLatin}
