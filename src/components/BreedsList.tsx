@@ -4,21 +4,46 @@ import {ArrowTopRightIcon} from '@radix-ui/react-icons'
 import { breeds } from '../../public/constants'
 import { Button } from './ui/button'
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from './ui/dialog'
+import { Card, CardContent, CardHeader, CardTitle } from './ui/card'
 
 
 const BreedsList = () => {
    return (
-      <div className='flex flex-col gap-5 p-5'>
+      <div className='grid grid-cols-2 gap-5 p-5'>
          {breeds.map((breed, idx) => (
-            <div key={idx} className='flex flex-row justify-between bg-white shadow-sm border boder-slate-200 dark:bg-popover hover:border-slate-700 dark:hover:border-cyan-900 p-2 rounded-md duration-100'>
-               <div className='flex items-center'>
-                  <h4 className='text-2xl font-semibold text-slate-800 dark:text-white'>
-                     {breed.breed}
-                  </h4>
-               </div>
+            <Card key={idx}>
+               <CardHeader>
+                  <CardTitle>{breed.breed}</CardTitle>
+               </CardHeader>
+               <CardContent>
+                  <Dialog>
+                     <DialogTrigger asChild>
+                        <Button size='icon' variant='secondary'>
+                           <ArrowTopRightIcon className='text-2xl' />
+                        </Button>
+                     </DialogTrigger>
+                     <DialogContent>
+                        <DialogHeader>
+                           <DialogTitle>
+                              {breed.breed} &nbsp;{breed.icon}
+                           </DialogTitle>
+                           <DialogDescription>
+                              {breed.breedLatin}
+                           </DialogDescription>
+                        </DialogHeader>
+                     </DialogContent>
+                  </Dialog>
+               </CardContent>
+            </Card>
+         ))}
+      </div>
+   )
+}
 
-               <Dialog>
-                  <DialogTrigger>
+export default BreedsList
+
+{/* <Dialog>
+                  <DialogTrigger asChild>
                      <Button size='icon' variant='secondary'>
                         <ArrowTopRightIcon className='text-2xl' />
                      </Button>
@@ -33,11 +58,4 @@ const BreedsList = () => {
                         </DialogDescription>
                      </DialogHeader>
                   </DialogContent>
-               </Dialog>
-            </div>
-         ))}
-      </div>
-   )
-}
-
-export default BreedsList
+               </Dialog> */}
