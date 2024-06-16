@@ -2,7 +2,8 @@ import { create } from 'zustand'
 
 interface BreedPrediction {
    requestId: string,
-   class: string
+   class: string,
+   timestamp: string
 }
 
 interface BreedPredictionHistoryState {
@@ -19,7 +20,8 @@ export const useHistoryStore = create<BreedPredictionHistoryState>((set) => ({
             ...state.histories,
             {
                requestId: response.requestId,
-               class: response.class
+               class: response.class,
+               timestamp: response.timestamp
             } as BreedPrediction
          ]
       }))
