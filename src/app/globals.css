@@ -87,6 +87,3 @@
     }
   }
 
-#fileInput::-webkit-file-upload-button {
-    visibility: hidden;
-  }
