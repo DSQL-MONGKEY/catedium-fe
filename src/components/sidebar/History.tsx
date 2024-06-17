@@ -6,7 +6,7 @@ import { ScrollArea } from "../ui/scroll-area"
 const History = async() => {
    return (
       <div className="flex flex-col">
-         <ScrollArea className="h-[220px] w-full bord">
+         <ScrollArea className="h-[133px] w-full bord">
             <HistoryItems />
          </ScrollArea>
       </div>
