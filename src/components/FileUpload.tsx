@@ -22,7 +22,7 @@ const FileUpload = () => {
          if(file) {
             toast("Predicting...",{
                description: `Predicting the breeds on ${file.name}`,
-               duration: 10000,
+               duration: 7000,
             })
             setProgress(20)
             setTimeout(() => setProgress(50), 2000)
