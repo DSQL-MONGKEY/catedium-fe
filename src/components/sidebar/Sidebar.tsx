@@ -19,9 +19,11 @@ const SideBar = () => {
             </div>
 
             <div className="flex gap-3 justify-center mb-2">
-               <Link href='https://github.com/DSQL-MONGKEY/flask-api-catedium/tree/beta' target="blank">
+               <Link href='https://github.com/DSQL-MONGKEY/Catedium' target="blank">
                   <div id="docs" className="flex border boder-slate-200 h-11 text-center items-center px-7 rounded-md shadow-sm bg-popover hover:bg-accent hover:text-accent-foreground">
-                     <span>Docs</span>
+                     <span>
+                        Docs
+                     </span>
                   </div>
                </Link>
                <div id="mode-toggle" className="">
