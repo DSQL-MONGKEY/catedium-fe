@@ -21,7 +21,7 @@ export default function Home() {
           
         </div>
 
-        <div className="w-full mt-5 relative h-[300px] border border-slate-200 rounded-lg overflow-y-auto no-scrollbar shadow-sm dark:border-gray-700 dark:bg-slate-900">
+        <div className="w-full mt-5 relative h-[400px] border border-slate-200 rounded-lg overflow-y-auto no-scrollbar shadow-sm dark:border-gray-700 dark:bg-slate-900">
           <BreedsList />
         </div>
       </div>
