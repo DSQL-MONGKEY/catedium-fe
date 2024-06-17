@@ -96,7 +96,10 @@ const FileUpload = () => {
          </div>
 
          <div>
-            <Button onClick={handleFilePredict} className="text-white dark:text-accent text-sm">
+            <Button
+               disabled={progress > 0}
+               onClick={handleFilePredict} 
+               className="text-white dark:text-accent text-sm">
                Predict Image
             </Button>
          </div>
