@@ -5,7 +5,6 @@ import React, { useState } from 'react'
 import { Button } from './ui/button'
 import { useHistoryStore } from '@/state'
 import { Progress } from './ui/progress'
-import { useToast } from './ui/use-toast'
 import { toast } from 'sonner'
 
 
@@ -13,7 +12,7 @@ const FileUpload = () => {
    const [file, setFile] = useState<any>()
    const [progress, setProgress] = useState<number>(0)
    const { addHistories } = useHistoryStore()
-   const topToast = useToast().toast
+
 
    const handleFilePredict = async() => {
       const formData = new FormData()
@@ -23,6 +22,7 @@ const FileUpload = () => {
             toast("Predicting...",{
                description: `Predicting the breeds on ${file.name}`,
                duration: 7000,
+               className: 'text-sm sm:text-md'
             })
             setProgress(20)
             setTimeout(() => setProgress(50), 2000)
@@ -57,6 +57,7 @@ const FileUpload = () => {
             toast("Success", {
                description: 'The prediction proccess succeeded',
                duration: 7000,
+               className: 'text-sm sm:text-md'
             })
             setProgress(100)
             setTimeout(() => setProgress(0), 800)
@@ -64,7 +65,8 @@ const FileUpload = () => {
             setTimeout(() => 
                toast(`Rawrr! I'm ${data.data.class}`,{
                description: `You can check the detail on list below`,
-               duration: 7000
+               duration: 7000,
+               className: 'text-sm sm:text-md'
             }), 1000)
          }         
       } catch(err: any) {
@@ -81,15 +83,16 @@ const FileUpload = () => {
 
 
    return (
-      <div className='flex flex-col gap-4 h-full items-center w-full'>
-         <div className='grid grid-cols-1 gap-1.5'>
+      <>
+         <div className='flex flex-col gap-2 mt-2 sm:gap-4 h-full items-center w-full px-2'>
+         <div className='grid grid-cols-1 gap-1'>
             <label htmlFor="image-input" className='font-semibold'>
                Image
             </label>
             <input
                id='image-input'
                type='file'
-               onChange={handleFileUpload} 
+               onChange={handleFileUpload}    
                accept='image/*'
                className='file:bg-transparent file:border-none border rounded-md border-slate-200 dark:border-white/[0.2]'
             />
@@ -104,10 +107,12 @@ const FileUpload = () => {
             </Button>
          </div>
          
-         <div className='w-[500px]'>
+         <div className='w-[200px] sm:w-[350px] md:w-[500px]'>
             <Progress value={progress} className='h-2' />
          </div>
       </div>
+      </>
+      
    )
 }
 
