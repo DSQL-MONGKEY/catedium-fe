@@ -12,8 +12,8 @@ export default function Home() {
   return (
     <main className="w-full h-screen flex flex-row overflow-hidden gap-3 bg-white dark:bg-black">
       <SideBar />
-      <div className="flex flex-col w-full h-full gap-3 justify-center px-10 py-3">
-        <div className="w-full flex flex-col rounded-md justify-center items-center border border-slate-200 dark:border-gray-700 dark:bg-slate-900 shadow-sm py-10">
+      <div className="flex flex-col w-full h-full gap-3 sm:justify-center px-2 md:px-10 md:py-3">
+        <div className="w-full flex flex-col rounded-md sm:border sm:border-slate-200 sm:dark:border-gray-700 sm:dark:bg-slate-900 shadow-sm py-10">
             <UploadField/>
         </div>
 
