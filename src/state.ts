@@ -27,3 +27,17 @@ export const useHistoryStore = create<BreedPredictionHistoryState>((set) => ({
       }))
    }
 }))
+
+
+interface SidebarState {
+   isExpanded: boolean,
+   setIsExpanded: (state: boolean) => void
+}
+
+export const useSidabarStateStore = create<SidebarState>((set) => 
+({
+   isExpanded: false,
+   setIsExpanded: (response: boolean) => set(() => ({
+      isExpanded: response
+   }))
+}))
