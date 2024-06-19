@@ -1,10 +1,16 @@
+
+import { DoubleArrowLeftIcon, DoubleArrowRightIcon } from '@radix-ui/react-icons'
+
 import History from "./History";
 import { ModeToggle } from "../ModeToggle";
 import Link from "next/link";
+import { useSidabarStateStore } from '@/state';
+
 
 const SideBar = () => {
+
    return (
-      <div className="max-h-screen w-[300px] bg-white border border-slate-200 dark:bg-slate-900 dark:border-gray-700 p-2 relative rounded-lg">
+      <aside className="hidden sm:flex h-screen w-[300px] bg-white border-r border-slate-200 dark:bg-slate-900 dark:border-gray-700 p-2 relative">
          <div className="flex flex-col">
             <div className="flex flex-col text-center p-5">
                <span className="text-xl font-bold">
@@ -38,7 +44,7 @@ const SideBar = () => {
                <History />
             </div>
          </div>
-      </div>
+      </aside>
    )
 } 
 
