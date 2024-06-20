@@ -11,7 +11,7 @@ import { ScrollArea } from './ui/scroll-area'
 
 const BreedsList = () => {
    return (
-      <div className='grid grid-cols-1 md:grid-cols-3 gap-5 p-2 md:p-5'>
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 p-5 md:p-5'>
          {breeds.map((breed, idx) => (
             <Card key={idx} className='hover:border-slate-400 dark:hover:border-cyan-900 duration-100'>
                <CardHeader>
